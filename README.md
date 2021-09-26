@@ -9,7 +9,7 @@
 
 ### To run this project
 
-1. `git clone URL`
+1. `git clone git@github.com:mikdadayan/task-backend.git`
 2. `cd REPO_NAME`
 3. `npm install`
 4. `npm start`

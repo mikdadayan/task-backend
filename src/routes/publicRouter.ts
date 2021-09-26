@@ -5,14 +5,14 @@ import {
   bodyToJSONFile,
   ReadJSONFile,
 } from "../controllers/controller";
-import { isAuth, checkMiddlware } from "../middlewares/isAuth";
+import authMiddleware from "../middlewares/authMiddleware";
 
 const router = Router();
 
 router.get("/", checkRequest);
 
-router.post("/save/:id", checkMiddlware, bodyToJSONFile);
+router.post("/save/:id", authMiddleware, bodyToJSONFile);
 
-router.get("/save/:id", checkMiddlware, ReadJSONFile);
+router.get("/save/:id", authMiddleware, ReadJSONFile);
 
 export default router;
